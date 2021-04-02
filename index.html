@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+ 
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, viewport-fit=cover">
+ 
+  <script>
+    var setStyle = function(cssArr){
+      var i= 0,len = cssArr.length;
+      for(i;i<len;i++){
+        document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+      }
+    };
+    function goPAGE() {
+    if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        setStyle(['mobile.css']);
+      }else {
+      setStyle(['index.css']);					
+      }
+    }
+    goPAGE(); 
+  </script>
+  <title>JokerLiang</title>
+ 
+</head>
+
+<body>
+  <div class="container">
+    <div class="background">
+      DEVELOPER
+      <div class="name">
+        JokerLiang
+      </div>
+    </div>
+    <div class="content">
+      <div class="line">I am Liangjun and you can call me JokerLiang</div>
+      <div class="line">Enjoy doing someting creative and challenging</div>
+      <div class="line">You can find me on <a href="https://github.com/LoverJoker">Github</a> & <a href="https://weibo.com/JokerLiangL">Weibo</a> </div>
+      <div class="line">If you want to know more about me, please scan my <a href="https://github.com/LoverJoker/curriculumVitae">resumes</a></div>
+      <div class="line">Debug the world 😃</div>
+    </div>
+    <div class="msg">
+      <div class="func">
+        <div><img src="./icon_wechat.svg" alt=""></div>
+        <div class="tips">JokerLiang666</div>
+      </div>
+      <div class="func">
+        <div><img src="./icon_email.svg" alt=""></div>
+        <div class="tips">we@jokerliang</div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="line"></div> JAVA、KOTLIN、NODE.JS、ANDROID、VUE、DOCKER
+    </div>
+  </div>
+
+</body>
+
+</html>

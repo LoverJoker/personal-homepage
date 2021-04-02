@@ -1,0 +1,104 @@
+$primaryColor: #FA709A;
+$secondaryColor: #3EB8DD;
+
+$width: 1920;
+$height: 1080;
+ 
+
+ 
+@function pxToVw($px) {
+  @return ($px/$width * 100vw)
+}
+
+@function pxToVh($px) {
+  @return ($px/$height * 100vh)
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+}
+*:not(input,textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+ 
+
+@font-face {
+  font-family: 'opposans';
+  src: url('https://wubao.oss-cn-beijing.aliyuncs.com/OPPOSans-M2.ttf');
+}
+
+a {
+  color: #000;
+}
+body {
+  height: 100vh;
+  font-family: 'opposans';
+  display: flex;
+ 
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  width: pxToVw(1120);
+  height: pxToVh(817);
+  margin-top: pxToVh(100);
+  position: absolute;
+  .background {
+    color: rgba(0, 0, 0, 0.034);
+    font-size: pxToVw(174);
+    font-weight: bold;
+    position: relative;
+ 
+    .name {
+      font-size: pxToVw(40);
+      color: #000;
+      position: absolute;
+      margin-left: pxToVw(8);
+      bottom: pxToVw(40);
+    }
+  }
+  .content {
+    margin-top: pxToVh(64);
+    color: #666666;
+    font-size: pxToVw(16);
+    .line {
+      margin-bottom: pxToVh(24);
+    }
+  }
+  .msg {
+    display: flex;
+    .func {
+      margin-right: pxToVw(32);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      .tips {
+        margin-left: pxToVw(12);
+        color: #000000;
+        font-size: pxToVw(16);
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: absolute;
+    color: #999999;
+    font-size: 12px;
+    right: 0;
+    .line {
+      margin-right: 24px;
+      border-top: 1px solid #999999;
+      width: pxToVw(88);
+    }
+  }
+}
